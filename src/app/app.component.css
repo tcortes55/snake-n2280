@@ -1,0 +1,20 @@
+.game-container {
+    width: fit-content;
+    position: relative;
+    display: block;
+    margin: auto;
+    background-color: #47565A;
+    /* box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22); */
+    /* border-radius: 5px; */
+  }
+
+  .row {
+    height: 14px;
+  }
+  
+  .column {
+    border: 1px solid rgba(97, 131, 138, .1);
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+  }
