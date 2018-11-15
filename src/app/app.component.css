@@ -18,3 +18,28 @@
     height: 12px;
     display: inline-block;
   }
+
+  .keypad {
+      width: 100%;
+      margin: auto;
+  }
+
+  .row-buttons {
+    width: fit-content;
+    display: block;
+    margin: auto;
+  }
+
+  .arrow {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      margin: auto;
+  }
+
+  .arrow-hidden {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin: auto;
+  }

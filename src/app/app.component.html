@@ -23,3 +23,20 @@
   </div>
 </div>
 <button id="start-button" type="button" (click)="newGame()">Start</button>
+<div class="keypad">
+  <div class="row-buttons">
+    <div class="arrow-hidden"></div>
+    <button class="arrow" (click)="setDirection(38)">↑</button>
+    <div class="arrow-hidden"></div>
+  </div>
+  <div class="row-buttons">
+    <button class="arrow" (click)="setDirection(37)">←</button>
+    <div class="arrow-hidden"></div>
+    <button class="arrow" (click)="setDirection(39)">→</button>
+  </div>
+  <div class="row-buttons">
+    <div class="arrow-hidden"></div>
+    <button class="arrow" (click)="setDirection(40)">↓</button>
+    <div class="arrow-hidden"></div>
+  </div>
+</div>

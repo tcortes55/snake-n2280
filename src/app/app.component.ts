@@ -41,20 +41,21 @@ export class AppComponent {
     this.setBoard();
   }
 
-  handleKeyboardEvents(e: KeyboardEvent) {
-    if (e.keyCode === CONTROLS.LEFT && this.snake.direction != CONTROLS.RIGHT) {
+  setDirection(newDir: any): void {
+    if (newDir === CONTROLS.LEFT && this.snake.direction != CONTROLS.RIGHT) {
       this.tempDirection = CONTROLS.LEFT;
-    } else if (e.keyCode === CONTROLS.UP && this.snake.direction != CONTROLS.DOWN) {
+    } else if (newDir === CONTROLS.UP && this.snake.direction != CONTROLS.DOWN) {
       this.tempDirection = CONTROLS.UP;
-    } else if (e.keyCode === CONTROLS.RIGHT && this.snake.direction != CONTROLS.LEFT) {
+    } else if (newDir === CONTROLS.RIGHT && this.snake.direction != CONTROLS.LEFT) {
       this.tempDirection = CONTROLS.RIGHT;
-    } else if (e.keyCode === CONTROLS.DOWN && this.snake.direction != CONTROLS.UP) {
+    } else if (newDir === CONTROLS.DOWN && this.snake.direction != CONTROLS.UP) {
       this.tempDirection = CONTROLS.DOWN;
     } 
   }
 
-
-
+  handleKeyboardEvents(e: KeyboardEvent) {
+    this.setDirection(e.keyCode);
+  }
 
   setColors(col: number, row: number): string {
     if (this.fruit.x === row && this.fruit.y === col) {
