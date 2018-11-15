@@ -1,5 +1,5 @@
-export const BOARD_WIDTH = 16;
-export const BOARD_HEIGHT = 8;
+export const BOARD_WIDTH = 18;
+export const BOARD_HEIGHT = 9;
 
 export const CONTROLS = {
     LEFT: 37,
@@ -11,8 +11,8 @@ export const CONTROLS = {
 export const COLORS = {
     GAME_OVER: '#D24D57',
     FRUIT: '#EC644B',
-    HEAD: '#336E7B',
-    BODY: '#C8F7C5',
-    BOARD: '#86B5BD',
+    SNAKE_HEAD: 'rgb(32,43,0)',
+    SNAKE_BODY: 'rgb(75,100,0)',
+    BOARD: 'rgb(155,185,4)',
     OBSTACLE: '#383522'
   };
