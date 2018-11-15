@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".game-container {\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    position: relative;\r\n    display: block;\r\n    margin: auto;\r\n    background-color: #47565A;\r\n    /* box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22); */\r\n    /* border-radius: 5px; */\r\n  }\r\n\r\n  .row {\r\n    height: 14px;\r\n  }\r\n\r\n  .column {\r\n    border: 1px solid rgba(97, 131, 138, .1);\r\n    width: 12px;\r\n    height: 12px;\r\n    display: inline-block;\r\n  }"
+module.exports = ".game-container {\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    position: relative;\r\n    display: block;\r\n    margin: auto;\r\n    background-color: #47565A;\r\n    /* box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22); */\r\n    /* border-radius: 5px; */\r\n  }\r\n\r\n  .row {\r\n    height: 14px;\r\n  }\r\n\r\n  .column {\r\n    border: 1px solid rgba(97, 131, 138, .1);\r\n    width: 12px;\r\n    height: 12px;\r\n    display: inline-block;\r\n  }\r\n\r\n  .keypad {\r\n      width: 100%;\r\n      margin: auto;\r\n  }\r\n\r\n  .row-buttons {\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    display: block;\r\n    margin: auto;\r\n  }\r\n\r\n  .arrow {\r\n      width: 30px;\r\n      height: 30px;\r\n      display: inline-block;\r\n      margin: auto;\r\n  }\r\n\r\n  .arrow-hidden {\r\n    width: 30px;\r\n    height: 30px;\r\n    display: inline-block;\r\n    margin: auto;\r\n  }"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = ".game-container {\r\n    width: -webkit-fit-content;\r\n    wi
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <div class=\"game-container\">\n  <div class=\"game-header\">\n    <h3 class=\"logo\">ngx-Snake</h3>\n    <div class=\"score-block\">\n      <h3 class=\"score\" [ngClass]=\"{'new-best-score': newBestScore}\">Score: {{score}}</h3>\n      <h3 class=\"best-score\" [ngClass]=\"{'new-best-score': newBestScore}\">Best Score: {{best_score}}</h3>\n    </div>\n  </div>\n  <div class=\"row\" *ngFor=\"let column of board; let i = index;\">\n    <div class=\"column\" [ngStyle]=\"{'background-color': setColors(i, j)}\" *ngFor=\"let row of column; let j = index\"></div>\n  </div>\n  <div class=\"start-button\" [ngClass]=\"{'disable-clicks': gameStarted}\" (click)=\"showMenu()\">Start Game</div>\n  <div class=\"new-game-menu\" *ngIf=\"showMenuChecker\">\n    <span class=\"new-game-menu-label\">Select Mode</span>\n    <div class=\"start-button new-game-button\" (click)=\"newGame(mode)\" *ngFor=\"let mode of getKeys(all_modes)\">{{all_modes[mode]}}</div>\n  </div>\n</div> -->\n<div class=\"game-container\">\n  <div class=\"row\" *ngFor=\"let column of board; let i = index\">\n    <div class=\"column\" [ngStyle]=\"{'background-color': setColors(i, j)}\" *ngFor=\"let row of column; let j = index\">\n      \n    </div>\n  </div>\n</div>\n<button id=\"start-button\" type=\"button\" (click)=\"newGame()\">Start</button>"
+module.exports = "<!-- <div class=\"game-container\">\n  <div class=\"game-header\">\n    <h3 class=\"logo\">ngx-Snake</h3>\n    <div class=\"score-block\">\n      <h3 class=\"score\" [ngClass]=\"{'new-best-score': newBestScore}\">Score: {{score}}</h3>\n      <h3 class=\"best-score\" [ngClass]=\"{'new-best-score': newBestScore}\">Best Score: {{best_score}}</h3>\n    </div>\n  </div>\n  <div class=\"row\" *ngFor=\"let column of board; let i = index;\">\n    <div class=\"column\" [ngStyle]=\"{'background-color': setColors(i, j)}\" *ngFor=\"let row of column; let j = index\"></div>\n  </div>\n  <div class=\"start-button\" [ngClass]=\"{'disable-clicks': gameStarted}\" (click)=\"showMenu()\">Start Game</div>\n  <div class=\"new-game-menu\" *ngIf=\"showMenuChecker\">\n    <span class=\"new-game-menu-label\">Select Mode</span>\n    <div class=\"start-button new-game-button\" (click)=\"newGame(mode)\" *ngFor=\"let mode of getKeys(all_modes)\">{{all_modes[mode]}}</div>\n  </div>\n</div> -->\n<div class=\"game-container\">\n  <div class=\"row\" *ngFor=\"let column of board; let i = index\">\n    <div class=\"column\" [ngStyle]=\"{'background-color': setColors(i, j)}\" *ngFor=\"let row of column; let j = index\">\n      \n    </div>\n  </div>\n</div>\n<button id=\"start-button\" type=\"button\" (click)=\"newGame()\">Start</button>\n<div class=\"keypad\">\n  <div class=\"row-buttons\">\n    <div class=\"arrow-hidden\"></div>\n    <button class=\"arrow\" (click)=\"setDirection(38)\">↑</button>\n    <div class=\"arrow-hidden\"></div>\n  </div>\n  <div class=\"row-buttons\">\n    <button class=\"arrow\" (click)=\"setDirection(37)\">←</button>\n    <div class=\"arrow-hidden\"></div>\n    <button class=\"arrow\" (click)=\"setDirection(39)\">→</button>\n  </div>\n  <div class=\"row-buttons\">\n    <div class=\"arrow-hidden\"></div>\n    <button class=\"arrow\" (click)=\"setDirection(40)\">↓</button>\n    <div class=\"arrow-hidden\"></div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -90,19 +90,22 @@ var AppComponent = /** @class */ (function () {
         };
         this.setBoard();
     }
-    AppComponent.prototype.handleKeyboardEvents = function (e) {
-        if (e.keyCode === _app_constants__WEBPACK_IMPORTED_MODULE_1__["CONTROLS"].LEFT && this.snake.direction != _app_constants__WEBPACK_IMPORTED_MODULE_1__["CONTROLS"].RIGHT) {
+    AppComponent.prototype.setDirection = function (newDir) {
+        if (newDir === _app_constants__WEBPACK_IMPORTED_MODULE_1__["CONTROLS"].LEFT && this.snake.direction != _app_constants__WEBPACK_IMPORTED_MODULE_1__["CONTROLS"].RIGHT) {
             this.tempDirection = _app_constants__WEBPACK_IMPORTED_MODULE_1__["CONTROLS"].LEFT;
         }
-        else if (e.keyCode === _app_constants__WEBPACK_IMPORTED_MODULE_1__["CONTROLS"].UP && this.snake.direction != _app_constants__WEBPACK_IMPORTED_MODULE_1__["CONTROLS"].DOWN) {
+        else if (newDir === _app_constants__WEBPACK_IMPORTED_MODULE_1__["CONTROLS"].UP && this.snake.direction != _app_constants__WEBPACK_IMPORTED_MODULE_1__["CONTROLS"].DOWN) {
             this.tempDirection = _app_constants__WEBPACK_IMPORTED_MODULE_1__["CONTROLS"].UP;
         }
-        else if (e.keyCode === _app_constants__WEBPACK_IMPORTED_MODULE_1__["CONTROLS"].RIGHT && this.snake.direction != _app_constants__WEBPACK_IMPORTED_MODULE_1__["CONTROLS"].LEFT) {
+        else if (newDir === _app_constants__WEBPACK_IMPORTED_MODULE_1__["CONTROLS"].RIGHT && this.snake.direction != _app_constants__WEBPACK_IMPORTED_MODULE_1__["CONTROLS"].LEFT) {
             this.tempDirection = _app_constants__WEBPACK_IMPORTED_MODULE_1__["CONTROLS"].RIGHT;
         }
-        else if (e.keyCode === _app_constants__WEBPACK_IMPORTED_MODULE_1__["CONTROLS"].DOWN && this.snake.direction != _app_constants__WEBPACK_IMPORTED_MODULE_1__["CONTROLS"].UP) {
+        else if (newDir === _app_constants__WEBPACK_IMPORTED_MODULE_1__["CONTROLS"].DOWN && this.snake.direction != _app_constants__WEBPACK_IMPORTED_MODULE_1__["CONTROLS"].UP) {
             this.tempDirection = _app_constants__WEBPACK_IMPORTED_MODULE_1__["CONTROLS"].DOWN;
         }
+    };
+    AppComponent.prototype.handleKeyboardEvents = function (e) {
+        this.setDirection(e.keyCode);
     };
     AppComponent.prototype.setColors = function (col, row) {
         if (this.fruit.x === row && this.fruit.y === col) {
