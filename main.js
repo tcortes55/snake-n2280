@@ -41,7 +41,7 @@ module.exports = ".game-container {\r\n    width: -webkit-fit-content;\r\n    wi
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <div class=\"game-container\">\n  <div class=\"game-header\">\n    <h3 class=\"logo\">ngx-Snake</h3>\n    <div class=\"score-block\">\n      <h3 class=\"score\" [ngClass]=\"{'new-best-score': newBestScore}\">Score: {{score}}</h3>\n      <h3 class=\"best-score\" [ngClass]=\"{'new-best-score': newBestScore}\">Best Score: {{best_score}}</h3>\n    </div>\n  </div>\n  <div class=\"row\" *ngFor=\"let column of board; let i = index;\">\n    <div class=\"column\" [ngStyle]=\"{'background-color': setColors(i, j)}\" *ngFor=\"let row of column; let j = index\"></div>\n  </div>\n  <div class=\"start-button\" [ngClass]=\"{'disable-clicks': gameStarted}\" (click)=\"showMenu()\">Start Game</div>\n  <div class=\"new-game-menu\" *ngIf=\"showMenuChecker\">\n    <span class=\"new-game-menu-label\">Select Mode</span>\n    <div class=\"start-button new-game-button\" (click)=\"newGame(mode)\" *ngFor=\"let mode of getKeys(all_modes)\">{{all_modes[mode]}}</div>\n  </div>\n</div> -->\n<div class=\"game-container\">\n  <div class=\"row\" *ngFor=\"let column of board; let i = index\">\n    <div class=\"column\" [ngStyle]=\"{'background-color': setColors(i, j)}\" *ngFor=\"let row of column; let j = index\">\n      \n    </div>\n  </div>\n</div>\n<button id=\"start-button\" type=\"button\" (click)=\"newGame()\">Start</button>\n<div class=\"keypad\">\n  <div class=\"row-buttons\">\n    <div class=\"arrow-hidden\"></div>\n    <button class=\"arrow\" (click)=\"setDirection(38)\">↑</button>\n    <div class=\"arrow-hidden\"></div>\n  </div>\n  <div class=\"row-buttons\">\n    <button class=\"arrow\" (click)=\"setDirection(37)\">←</button>\n    <div class=\"arrow-hidden\"></div>\n    <button class=\"arrow\" (click)=\"setDirection(39)\">→</button>\n  </div>\n  <div class=\"row-buttons\">\n    <div class=\"arrow-hidden\"></div>\n    <button class=\"arrow\" (click)=\"setDirection(40)\">↓</button>\n    <div class=\"arrow-hidden\"></div>\n  </div>\n</div>"
+module.exports = "<!-- <div class=\"game-container\">\n  <div class=\"game-header\">\n    <h3 class=\"logo\">ngx-Snake</h3>\n    <div class=\"score-block\">\n      <h3 class=\"score\" [ngClass]=\"{'new-best-score': newBestScore}\">Score: {{score}}</h3>\n      <h3 class=\"best-score\" [ngClass]=\"{'new-best-score': newBestScore}\">Best Score: {{best_score}}</h3>\n    </div>\n  </div>\n  <div class=\"row\" *ngFor=\"let column of board; let i = index;\">\n    <div class=\"column\" [ngStyle]=\"{'background-color': setColors(i, j)}\" *ngFor=\"let row of column; let j = index\"></div>\n  </div>\n  <div class=\"start-button\" [ngClass]=\"{'disable-clicks': gameStarted}\" (click)=\"showMenu()\">Start Game</div>\n  <div class=\"new-game-menu\" *ngIf=\"showMenuChecker\">\n    <span class=\"new-game-menu-label\">Select Mode</span>\n    <div class=\"start-button new-game-button\" (click)=\"newGame(mode)\" *ngFor=\"let mode of getKeys(all_modes)\">{{all_modes[mode]}}</div>\n  </div>\n</div> -->\n<div>Score: {{score}}</div>\n<div class=\"game-container\">\n  <div class=\"row\" *ngFor=\"let column of board; let i = index\">\n    <div class=\"column\" [ngStyle]=\"{'background-color': setColors(i, j)}\" *ngFor=\"let row of column; let j = index\">\n      \n    </div>\n  </div>\n</div>\n<button id=\"start-button\" type=\"button\" (click)=\"newGame()\">Start</button>\n<div class=\"keypad\">\n  <div class=\"row-buttons\">\n    <div class=\"arrow-hidden\"></div>\n    <button class=\"arrow\" (click)=\"setDirection(38)\">↑</button>\n    <div class=\"arrow-hidden\"></div>\n  </div>\n  <div class=\"row-buttons\">\n    <button class=\"arrow\" (click)=\"setDirection(37)\">←</button>\n    <div class=\"arrow-hidden\"></div>\n    <button class=\"arrow\" (click)=\"setDirection(39)\">→</button>\n  </div>\n  <div class=\"row-buttons\">\n    <div class=\"arrow-hidden\"></div>\n    <button class=\"arrow\" (click)=\"setDirection(40)\">↓</button>\n    <div class=\"arrow-hidden\"></div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -123,7 +123,11 @@ var AppComponent = /** @class */ (function () {
     AppComponent.prototype.fruitCollision = function (part) {
         return (part.x === this.fruit.x && part.y === this.fruit.y);
     };
+    AppComponent.prototype.selfCollision = function (part) {
+        return (this.board[part.y][part.x] === true);
+    };
     AppComponent.prototype.eatFruit = function () {
+        this.score++;
         var newTail = Object.assign({}, this.snake.parts[this.snake.parts.length - 1]);
         this.snake.parts.push(newTail);
         this.resetFruit();
@@ -132,6 +136,11 @@ var AppComponent = /** @class */ (function () {
         var newHead = this.repositionHead();
         var me = this;
         this.headTransition(newHead);
+        if (this.selfCollision(newHead)) {
+            alert("PERDEU!");
+            return;
+        }
+        ;
         if (this.fruitCollision(newHead)) {
             this.eatFruit();
         }
@@ -204,6 +213,7 @@ var AppComponent = /** @class */ (function () {
     };
     //
     AppComponent.prototype.newGame = function () {
+        this.setBoard();
         this.score = 0;
         this.interval = 150;
         this.tempDirection = _app_constants__WEBPACK_IMPORTED_MODULE_1__["CONTROLS"].LEFT;
