@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { COLORS, CONTROLS, BOARD_WIDTH, BOARD_HEIGHT } from './app.constants';
+import { timeout } from 'q';
+import { I18nSelectPipe } from '@angular/common';
 
 @Component({
   selector: 'snake-n2280',
@@ -73,7 +75,13 @@ export class AppComponent {
     return (part.x === this.fruit.x && part.y === this.fruit.y);
   }
 
+  selfCollision(part: any): boolean {
+    return (this.board[part.y][part.x] === true);
+  }
+
   eatFruit(): void {
+    this.score++;
+
     let newTail = Object.assign({}, this.snake.parts[this.snake.parts.length - 1]);
 
     this.snake.parts.push(newTail);
@@ -85,6 +93,12 @@ export class AppComponent {
     let me = this;
 
     this.headTransition(newHead);
+    if (this.selfCollision(newHead))
+    {
+      alert("PERDEU!");
+
+      return;
+    };
 
     if (this.fruitCollision(newHead))
     {
@@ -175,6 +189,7 @@ export class AppComponent {
 
   //
   newGame(): void {
+    this.setBoard();
     this.score = 0;
     this.interval = 150;
     this.tempDirection = CONTROLS.LEFT;
@@ -190,5 +205,7 @@ export class AppComponent {
 
     this.resetFruit();
     this.updatePositions();
+    
+    
   }
 }

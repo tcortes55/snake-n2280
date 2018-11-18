@@ -15,6 +15,7 @@
     <div class="start-button new-game-button" (click)="newGame(mode)" *ngFor="let mode of getKeys(all_modes)">{{all_modes[mode]}}</div>
   </div>
 </div> -->
+<div>Score: {{score}}</div>
 <div class="game-container">
   <div class="row" *ngFor="let column of board; let i = index">
     <div class="column" [ngStyle]="{'background-color': setColors(i, j)}" *ngFor="let row of column; let j = index">
