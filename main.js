@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".game-container {\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    position: relative;\r\n    display: block;\r\n    margin: auto;\r\n    background-color: #47565A;\r\n    /* box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22); */\r\n    /* border-radius: 5px; */\r\n  }\r\n\r\n  .row {\r\n    height: 14px;\r\n  }\r\n\r\n  .column {\r\n    border: 1px solid rgba(97, 131, 138, .1);\r\n    width: 12px;\r\n    height: 12px;\r\n    display: inline-block;\r\n  }\r\n\r\n  .keypad {\r\n      width: 100%;\r\n      margin: auto;\r\n  }\r\n\r\n  .row-buttons {\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    display: block;\r\n    margin: auto;\r\n  }\r\n\r\n  .arrow {\r\n      width: 80px;\r\n      height: 80px;\r\n      display: inline-block;\r\n      margin: auto;\r\n  }\r\n\r\n  .arrow-hidden {\r\n    width: 80px;\r\n    height: 80px;\r\n    display: inline-block;\r\n    margin: auto;\r\n  }"
+module.exports = ".game-container {\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    position: relative;\r\n    display: block;\r\n    margin: auto;\r\n    /* background-color: #47565A; */\r\n    /* box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22); */\r\n    /* border-radius: 5px; */\r\n  }\r\n\r\n  .row {\r\n    height: 26px;\r\n  }\r\n\r\n  .column {\r\n    border: 1px solid rgba(97, 131, 138, .1);\r\n    width: 24px;\r\n    height: 24px;\r\n    display: inline-block;\r\n  }\r\n\r\n  .keypad {\r\n      width: 100%;\r\n      margin: auto;\r\n  }\r\n\r\n  .row-buttons {\r\n    width: -webkit-fit-content;\r\n    width: -moz-fit-content;\r\n    width: fit-content;\r\n    display: block;\r\n    margin: auto;\r\n  }\r\n\r\n  .arrow {\r\n      width: 80px;\r\n      height: 80px;\r\n      display: inline-block;\r\n      margin: auto;\r\n  }\r\n\r\n  .arrow-hidden {\r\n    width: 80px;\r\n    height: 80px;\r\n    display: inline-block;\r\n    margin: auto;\r\n  }\r\n\r\n  .head, .food {\r\n    position: absolute;\r\n    width: 36px;\r\n  }\r\n\r\n  .food {\r\n    -webkit-transform: translateX(-6px) translateY(-6px);\r\n            transform: translateX(-6px) translateY(-6px);\r\n  }\r\n\r\n  .dir-left {\r\n    -webkit-transform: translateX(-6px) translateY(-6px);\r\n            transform: translateX(-6px) translateY(-6px);\r\n  }\r\n\r\n  .dir-right {\r\n    -webkit-transform: translateX(-6px) translateY(-6px) scaleX(-1);\r\n            transform: translateX(-6px) translateY(-6px) scaleX(-1);\r\n  }\r\n\r\n  .dir-up {\r\n    -webkit-transform: translateX(-6px) translateY(-9px) rotateZ(90deg) scaleY(-1);\r\n            transform: translateX(-6px) translateY(-9px) rotateZ(90deg) scaleY(-1);\r\n  }\r\n\r\n  .dir-down {\r\n    -webkit-transform: translateX(-6px) translateY(-9px) rotateZ(-90deg);\r\n            transform: translateX(-6px) translateY(-9px) rotateZ(-90deg);\r\n  }\r\n"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = ".game-container {\r\n    width: -webkit-fit-content;\r\n    wi
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <div class=\"game-container\">\n  <div class=\"game-header\">\n    <h3 class=\"logo\">ngx-Snake</h3>\n    <div class=\"score-block\">\n      <h3 class=\"score\" [ngClass]=\"{'new-best-score': newBestScore}\">Score: {{score}}</h3>\n      <h3 class=\"best-score\" [ngClass]=\"{'new-best-score': newBestScore}\">Best Score: {{best_score}}</h3>\n    </div>\n  </div>\n  <div class=\"row\" *ngFor=\"let column of board; let i = index;\">\n    <div class=\"column\" [ngStyle]=\"{'background-color': setColors(i, j)}\" *ngFor=\"let row of column; let j = index\"></div>\n  </div>\n  <div class=\"start-button\" [ngClass]=\"{'disable-clicks': gameStarted}\" (click)=\"showMenu()\">Start Game</div>\n  <div class=\"new-game-menu\" *ngIf=\"showMenuChecker\">\n    <span class=\"new-game-menu-label\">Select Mode</span>\n    <div class=\"start-button new-game-button\" (click)=\"newGame(mode)\" *ngFor=\"let mode of getKeys(all_modes)\">{{all_modes[mode]}}</div>\n  </div>\n</div> -->\n<div>Score: {{score}}</div>\n<div class=\"game-container\">\n  <div class=\"row\" *ngFor=\"let column of board; let i = index\">\n    <div class=\"column\" [ngStyle]=\"{'background-color': setColors(i, j)}\" *ngFor=\"let row of column; let j = index\">\n      \n    </div>\n  </div>\n</div>\n<button id=\"start-button\" type=\"button\" (click)=\"newGame()\">Start</button>\n<div class=\"keypad\">\n  <div class=\"row-buttons\">\n    <div class=\"arrow-hidden\"></div>\n    <button class=\"arrow\" (click)=\"setDirection(38)\">↑</button>\n    <div class=\"arrow-hidden\"></div>\n  </div>\n  <div class=\"row-buttons\">\n    <button class=\"arrow\" (click)=\"setDirection(37)\">←</button>\n    <div class=\"arrow-hidden\"></div>\n    <button class=\"arrow\" (click)=\"setDirection(39)\">→</button>\n  </div>\n  <div class=\"row-buttons\">\n    <div class=\"arrow-hidden\"></div>\n    <button class=\"arrow\" (click)=\"setDirection(40)\">↓</button>\n    <div class=\"arrow-hidden\"></div>\n  </div>\n</div>"
+module.exports = "<!-- <div class=\"game-container\">\n  <div class=\"game-header\">\n    <h3 class=\"logo\">ngx-Snake</h3>\n    <div class=\"score-block\">\n      <h3 class=\"score\" [ngClass]=\"{'new-best-score': newBestScore}\">Score: {{score}}</h3>\n      <h3 class=\"best-score\" [ngClass]=\"{'new-best-score': newBestScore}\">Best Score: {{best_score}}</h3>\n    </div>\n  </div>\n  <div class=\"row\" *ngFor=\"let column of board; let i = index;\">\n    <div class=\"column\" [ngStyle]=\"{'background-color': setColors(i, j)}\" *ngFor=\"let row of column; let j = index\"></div>\n  </div>\n  <div class=\"start-button\" [ngClass]=\"{'disable-clicks': gameStarted}\" (click)=\"showMenu()\">Start Game</div>\n  <div class=\"new-game-menu\" *ngIf=\"showMenuChecker\">\n    <span class=\"new-game-menu-label\">Select Mode</span>\n    <div class=\"start-button new-game-button\" (click)=\"newGame(mode)\" *ngFor=\"let mode of getKeys(all_modes)\">{{all_modes[mode]}}</div>\n  </div>\n</div> -->\n<div class=\"\">Score: {{score}}</div>\n<div class=\"game-container\">\n  <div class=\"row\" *ngFor=\"let column of board; let i = index\">\n    <div class=\"column\" [ngStyle]=\"{'background-color': setColors(i, j)}\" *ngFor=\"let row of column; let j = index\">\n      <div>\n        <img src=\"../assets/clara.png\" class=\"head\" [ngClass]=\"{\n          'dir-left': tempDirection == 37,\n          'dir-right': tempDirection == 39,\n          'dir-up': tempDirection == 38,\n          'dir-down': tempDirection == 40\n        }\" *ngIf=\"isHead(i, j)\">\n        <img src=\"../assets/burger.png\" class=\"food\" *ngIf=\"isFood(i, j)\">\n      </div>\n    </div>\n  </div>\n</div>\n<button id=\"start-button\" type=\"button\" (click)=\"newGame()\">Start</button>\n<div class=\"keypad\">\n  <div class=\"row-buttons\">\n    <div class=\"arrow-hidden\"></div>\n    <button class=\"arrow\" (click)=\"setDirection(38)\">↑</button>\n    <div class=\"arrow-hidden\"></div>\n  </div>\n  <div class=\"row-buttons\">\n    <button class=\"arrow\" (click)=\"setDirection(37)\">←</button>\n    <div class=\"arrow-hidden\"></div>\n    <button class=\"arrow\" (click)=\"setDirection(39)\">→</button>\n  </div>\n  <div class=\"row-buttons\">\n    <div class=\"arrow-hidden\"></div>\n    <button class=\"arrow\" (click)=\"setDirection(40)\">↓</button>\n    <div class=\"arrow-hidden\"></div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -118,6 +118,20 @@ var AppComponent = /** @class */ (function () {
             return _app_constants__WEBPACK_IMPORTED_MODULE_1__["COLORS"].SNAKE_BODY;
         }
         return _app_constants__WEBPACK_IMPORTED_MODULE_1__["COLORS"].BOARD;
+    };
+    ;
+    AppComponent.prototype.isHead = function (col, row) {
+        if (this.snake.parts[0].x === row && this.snake.parts[0].y === col) {
+            return true;
+        }
+        return false;
+    };
+    ;
+    AppComponent.prototype.isFood = function (col, row) {
+        if (this.fruit.x === row && this.fruit.y === col) {
+            return true;
+        }
+        return false;
     };
     ;
     AppComponent.prototype.fruitCollision = function (part) {
@@ -258,8 +272,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BOARD_HEIGHT", function() { return BOARD_HEIGHT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CONTROLS", function() { return CONTROLS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "COLORS", function() { return COLORS; });
-var BOARD_WIDTH = 18;
-var BOARD_HEIGHT = 9;
+var BOARD_WIDTH = 16;
+var BOARD_HEIGHT = 7;
 var CONTROLS = {
     LEFT: 37,
     UP: 38,
@@ -270,6 +284,7 @@ var COLORS = {
     GAME_OVER: '#D24D57',
     FRUIT: '#EC644B',
     SNAKE_HEAD: 'rgb(32,43,0)',
+    // SNAKE_HEAD: 'rgba(255,255,255,0)',
     SNAKE_BODY: 'rgb(75,100,0)',
     BOARD: 'rgb(155,185,4)',
     OBSTACLE: '#383522'
