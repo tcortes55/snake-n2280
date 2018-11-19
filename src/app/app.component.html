@@ -15,11 +15,19 @@
     <div class="start-button new-game-button" (click)="newGame(mode)" *ngFor="let mode of getKeys(all_modes)">{{all_modes[mode]}}</div>
   </div>
 </div> -->
-<div>Score: {{score}}</div>
+<div class="">Score: {{score}}</div>
 <div class="game-container">
   <div class="row" *ngFor="let column of board; let i = index">
     <div class="column" [ngStyle]="{'background-color': setColors(i, j)}" *ngFor="let row of column; let j = index">
-      
+      <div>
+        <img src="../assets/clara.png" class="head" [ngClass]="{
+          'dir-left': tempDirection == 37,
+          'dir-right': tempDirection == 39,
+          'dir-up': tempDirection == 38,
+          'dir-down': tempDirection == 40
+        }" *ngIf="isHead(i, j)">
+        <img src="../assets/burger.png" class="food" *ngIf="isFood(i, j)">
+      </div>
     </div>
   </div>
 </div>

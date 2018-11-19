@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { COLORS, CONTROLS, BOARD_WIDTH, BOARD_HEIGHT } from './app.constants';
-import { timeout } from 'q';
-import { I18nSelectPipe } from '@angular/common';
 
 @Component({
   selector: 'snake-n2280',
@@ -69,6 +67,23 @@ export class AppComponent {
     }
 
     return COLORS.BOARD;
+  };
+
+
+  isHead(col: number, row: number): boolean {
+    if (this.snake.parts[0].x === row && this.snake.parts[0].y === col) {
+      return true;
+    }
+
+    return false;
+  };
+  
+  isFood(col: number, row: number): boolean {
+    if (this.fruit.x === row && this.fruit.y === col) {
+      return true;
+    }
+
+    return false;
   };
 
   fruitCollision(part: any): boolean {
