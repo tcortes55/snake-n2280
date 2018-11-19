@@ -272,7 +272,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BOARD_HEIGHT", function() { return BOARD_HEIGHT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CONTROLS", function() { return CONTROLS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "COLORS", function() { return COLORS; });
-var BOARD_WIDTH = 16;
+var BOARD_WIDTH = 12;
 var BOARD_HEIGHT = 7;
 var CONTROLS = {
     LEFT: 37,
