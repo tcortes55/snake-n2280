@@ -26,7 +26,7 @@ html, body
     /* padding: 0.75em 1.05em; */
     top: calc(calc(100vh - 72px) * 135/600);
     left: calc(calc(100vh - 72px) * 31/600);
-    padding: calc(calc(100vh - 72px) * 12/600) calc(calc(100vh - 72px) * 18/600);
+    padding: calc(calc(100vh - 72px) * 12/600) calc(calc(100vh - 72px) * 20/600);
     z-index: -2;
     width: fit-content;
   }
