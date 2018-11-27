@@ -8,6 +8,23 @@
     /* border-radius: 5px; */
   }
 
+  .game-screen {
+    background-color: rgb(155,185,4);
+    padding: 0.25em;
+  }
+
+  .game-board {
+    border: solid 1px rgb(54, 72, 0);
+  }
+
+  .game-score {
+    /* font-family: 'Courier New', Courier, monospace; */
+    /* font-family: 'Press Start 2P', cursive; */
+    /* font-family: 'Chakra Petch', sans-serif; */
+    font-family: 'Eight Bit Dragon';
+    font-size: 10px;
+  }
+
   .row {
     height: 14px;
     /* VERSÃO CLARA */
@@ -47,6 +64,11 @@
     height: 80px;
     display: inline-block;
     margin: auto;
+  }
+
+  .bg-nokia {
+    position: absolute;
+    z-index: -1;
   }
 
   /* VERSÃO CLARA */

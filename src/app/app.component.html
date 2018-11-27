@@ -15,38 +15,45 @@
     <div class="start-button new-game-button" (click)="newGame(mode)" *ngFor="let mode of getKeys(all_modes)">{{all_modes[mode]}}</div>
   </div>
 </div> -->
-<div class="">Score: {{score}}</div>
+
 <div class="game-container">
-  <div class="row" *ngFor="let column of board; let i = index">
-    <div class="column" [ngStyle]="{'background-color': setColors(i, j)}" *ngFor="let row of column; let j = index">
-      <!-- VERSÃO CLARA -->
-      <!-- <div>
-        <img src="../snake-n2280/assets/clara.png" class="head" [ngClass]="{
-          'dir-left': tempDirection == 37,
-          'dir-right': tempDirection == 39,
-          'dir-up': tempDirection == 38,
-          'dir-down': tempDirection == 40
-        }" *ngIf="isHead(i, j)">
-        <img src="../snake-n2280/assets/burger.png" class="food" *ngIf="isFood(i, j)">
-      </div> -->
+  <!-- <img class="bg-nokia" src="../assets/nokia2280.png"> -->
+  <img class="bg-nokia" src="../snake-n2280/assets/nokia2280.png">
+  <div class="game-screen">
+  <div class="game-score">{{score}}</div>
+  <div class="game-board">
+    <div class="row" *ngFor="let column of board; let i = index">
+      <div class="column" [ngStyle]="{'background-color': setColors(i, j)}" *ngFor="let row of column; let j = index">
+        <!-- VERSÃO CLARA -->
+        <!-- <div>
+          <img src="../snake-n2280/assets/clara.png" class="head" [ngClass]="{
+            'dir-left': tempDirection == 37,
+            'dir-right': tempDirection == 39,
+            'dir-up': tempDirection == 38,
+            'dir-down': tempDirection == 40
+          }" *ngIf="isHead(i, j)">
+          <img src="../snake-n2280/assets/burger.png" class="food" *ngIf="isFood(i, j)">
+        </div> -->
+      </div>
     </div>
   </div>
-</div>
-<button id="start-button" type="button" (click)="newGame()">Start</button>
-<div class="keypad">
-  <div class="row-buttons">
-    <div class="arrow-hidden"></div>
-    <button class="arrow" (click)="setDirection(38)">↑</button>
-    <div class="arrow-hidden"></div>
   </div>
-  <div class="row-buttons">
-    <button class="arrow" (click)="setDirection(37)">←</button>
-    <div class="arrow-hidden"></div>
-    <button class="arrow" (click)="setDirection(39)">→</button>
-  </div>
-  <div class="row-buttons">
-    <div class="arrow-hidden"></div>
-    <button class="arrow" (click)="setDirection(40)">↓</button>
-    <div class="arrow-hidden"></div>
+  <button id="start-button" type="button" (click)="newGame()">Start</button>
+  <div class="keypad">
+    <div class="row-buttons">
+      <div class="arrow-hidden"></div>
+      <button class="arrow" (click)="setDirection(38)">↑</button>
+      <div class="arrow-hidden"></div>
+    </div>
+    <div class="row-buttons">
+      <button class="arrow" (click)="setDirection(37)">←</button>
+      <div class="arrow-hidden"></div>
+      <button class="arrow" (click)="setDirection(39)">→</button>
+    </div>
+    <div class="row-buttons">
+      <div class="arrow-hidden"></div>
+      <button class="arrow" (click)="setDirection(40)">↓</button>
+      <div class="arrow-hidden"></div>
+    </div>
   </div>
 </div>
