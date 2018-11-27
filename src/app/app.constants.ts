@@ -1,4 +1,4 @@
-export const BOARD_WIDTH = 18;
+export const BOARD_WIDTH = 12;
 export const BOARD_HEIGHT = 9;
 // VERSÃO CLARA
 // export const BOARD_WIDTH = 12;

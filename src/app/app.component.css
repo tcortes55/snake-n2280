@@ -1,5 +1,14 @@
+html, body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 .game-container {
-    width: fit-content;
+    /* width: fit-content;
+    height: fit-content; */
     position: relative;
     display: block;
     margin: auto;
@@ -10,7 +19,14 @@
 
   .game-screen {
     background-color: rgb(155,185,4);
-    padding: 0.25em;
+    position: absolute;
+    /* top: 135px;
+    left: 31px; */
+    /* padding: 0.75em 1.05em; */
+    top: calc(95vh * 135/600);
+    left: calc(95vh * 31/600);
+    padding: calc(95vh * 12/600) calc(95vh * 18/600);
+    z-index: -2;
   }
 
   .game-board {
@@ -22,19 +38,22 @@
     /* font-family: 'Press Start 2P', cursive; */
     /* font-family: 'Chakra Petch', sans-serif; */
     font-family: 'Eight Bit Dragon';
-    font-size: 10px;
+    /* font-size: 10px; */
+    font-size: calc(95vh * 10/600);
   }
 
   .row {
-    height: 14px;
+    height: calc(95vh * 12/600 + 2px);
     /* VERSÃO CLARA */
     /* height: 26px; */
   }
   
   .column {
     border: 1px solid rgba(97, 131, 138, .1);
-    width: 12px;
-    height: 12px;
+    width: calc(95vh * 12/600);
+    height: calc(95vh * 12/600);
+    /* width: 12px;
+    height: 12px; */
     /* VERSÃO CLARA */
     /* width: 24px;
     height: 24px; */
@@ -68,6 +87,7 @@
 
   .bg-nokia {
     position: absolute;
+    height: 95vh;
     z-index: -1;
   }
 
