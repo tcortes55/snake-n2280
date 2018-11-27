@@ -9,13 +9,18 @@
   }
 
   .row {
-    height: 26px;
+    height: 14px;
+    /* VERSÃO CLARA */
+    /* height: 26px; */
   }
   
   .column {
     border: 1px solid rgba(97, 131, 138, .1);
-    width: 24px;
-    height: 24px;
+    width: 12px;
+    height: 12px;
+    /* VERSÃO CLARA */
+    /* width: 24px;
+    height: 24px; */
     display: inline-block;
   }
 
@@ -44,7 +49,8 @@
     margin: auto;
   }
 
-  .head, .food {
+  /* VERSÃO CLARA */
+  /* .head, .food {
     position: absolute;
     width: 36px;
   }
@@ -67,4 +73,4 @@
 
   .dir-down {
     transform: translateX(-6px) translateY(-9px) rotateZ(-90deg);
-  }
+  } */

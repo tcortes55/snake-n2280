@@ -1,5 +1,8 @@
-export const BOARD_WIDTH = 12;
-export const BOARD_HEIGHT = 7;
+export const BOARD_WIDTH = 18;
+export const BOARD_HEIGHT = 9;
+// VERSÃO CLARA
+// export const BOARD_WIDTH = 12;
+// export const BOARD_HEIGHT = 7;
 
 export const CONTROLS = {
     LEFT: 37,

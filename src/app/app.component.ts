@@ -70,21 +70,22 @@ export class AppComponent {
   };
 
 
-  isHead(col: number, row: number): boolean {
-    if (this.snake.parts[0].x === row && this.snake.parts[0].y === col) {
-      return true;
-    }
+  // VERSÃO CLARA
+  // isHead(col: number, row: number): boolean {
+  //   if (this.snake.parts[0].x === row && this.snake.parts[0].y === col) {
+  //     return true;
+  //   }
 
-    return false;
-  };
+  //   return false;
+  // };
   
-  isFood(col: number, row: number): boolean {
-    if (this.fruit.x === row && this.fruit.y === col) {
-      return true;
-    }
+  // isFood(col: number, row: number): boolean {
+  //   if (this.fruit.x === row && this.fruit.y === col) {
+  //     return true;
+  //   }
 
-    return false;
-  };
+  //   return false;
+  // };
 
   fruitCollision(part: any): boolean {
     return (part.x === this.fruit.x && part.y === this.fruit.y);
