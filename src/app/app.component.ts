@@ -168,7 +168,7 @@ export class AppComponent {
     let x = this.randomWidth();
     let y = this.randomHeight();
 
-    if (this.board[y][x] === true)
+    if (this.board[y][x] === true || (x === this.fruit.x && y === this.fruit.y))
     {
       return this.resetFruit();
     }

@@ -18,14 +18,15 @@ html, body
   }
 
   .game-screen {
+    /* background-color: rgb(155,185,4); */
     background-color: rgb(155,185,4);
     position: absolute;
     /* top: 135px;
     left: 31px; */
     /* padding: 0.75em 1.05em; */
-    top: calc(95vh * 135/600);
-    left: calc(95vh * 31/600);
-    padding: calc(95vh * 12/600) calc(95vh * 18/600);
+    top: calc(90vh * 135/600);
+    left: calc(90vh * 31/600);
+    padding: calc(90vh * 12/600) calc(90vh * 18/600);
     z-index: -2;
   }
 
@@ -39,25 +40,30 @@ html, body
     /* font-family: 'Chakra Petch', sans-serif; */
     font-family: 'Eight Bit Dragon';
     /* font-size: 10px; */
-    font-size: calc(95vh * 10/600);
+    font-size: calc(90vh * 10/600);
   }
 
   .row {
-    height: calc(95vh * 12/600 + 2px);
+    /* height: calc(90vh * 12/600 + 2px); */
+    height: calc(90vh * 12/600);
+
+    display: flex;
+    /* height: calc(90vh * 12/600); */
     /* VERSÃO CLARA */
     /* height: 26px; */
   }
   
   .column {
-    border: 1px solid rgba(97, 131, 138, .1);
-    width: calc(95vh * 12/600);
-    height: calc(95vh * 12/600);
+    /* border: 1px solid rgba(97, 131, 138, .1); */
+    width: calc(90vh * 12/600);
+    height: calc(90vh * 12/600);
     /* width: 12px;
     height: 12px; */
     /* VERSÃO CLARA */
     /* width: 24px;
     height: 24px; */
-    display: inline-block;
+    /* display: inline-block; */
+    display: inline;
   }
 
   .keypad {
@@ -87,7 +93,7 @@ html, body
 
   .bg-nokia {
     position: absolute;
-    height: 95vh;
+    height: 90vh;
     z-index: -1;
   }
 
