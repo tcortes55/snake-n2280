@@ -40,9 +40,6 @@
   </div>
   <button id="start-button" type="button" (click)="newGame()">Start</button>
   <!-- <div class="keypad">
-      <button id="start-button" type="button" (click)="newGame()">Start</button>
-      <button id="start-button" type="button" (click)="newGame()">Start</button>
-      <button id="start-button" type="button" (click)="newGame()">Start</button>
     <div class="row-buttons">
       <div class="arrow-hidden"></div>
       <button class="arrow" (click)="setDirection(38)">↑</button>
@@ -59,4 +56,21 @@
       <div class="arrow-hidden"></div>
     </div>
   </div> -->
+  <div class="keypad">
+    <div class="row-buttons">
+      <div class="arrow-hidden"></div>
+      <div class="arrow" (click)="setDirection(38)"></div>
+      <div class="arrow-hidden"></div>
+    </div>
+    <div class="row-buttons">
+      <div class="arrow" (click)="setDirection(37)"></div>
+      <div class="arrow-hidden"></div>
+      <div class="arrow" (click)="setDirection(39)"></div>
+    </div>
+    <div class="row-buttons">
+      <div class="arrow-hidden"></div>
+      <div class="arrow" (click)="setDirection(40)"></div>
+      <div class="arrow-hidden"></div>
+    </div>
+  </div>
 </div>

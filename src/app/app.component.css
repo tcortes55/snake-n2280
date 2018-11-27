@@ -24,9 +24,9 @@ html, body
     /* top: 135px;
     left: 31px; */
     /* padding: 0.75em 1.05em; */
-    top: calc((calc(100vh - 72px)) * 135/600);
-    left: calc((calc(100vh - 72px)) * 31/600);
-    padding: calc((calc(100vh - 72px)) * 12/600) calc((calc(100vh - 72px)) * 18/600);
+    top: calc(calc(100vh - 72px) * 135/600);
+    left: calc(calc(100vh - 72px) * 31/600);
+    padding: calc(calc(100vh - 72px) * 12/600) calc(calc(100vh - 72px) * 18/600);
     z-index: -2;
   }
 
@@ -40,12 +40,12 @@ html, body
     /* font-family: 'Chakra Petch', sans-serif; */
     font-family: 'Eight Bit Dragon';
     /* font-size: 10px; */
-    font-size: calc((calc(100vh - 72px)) * 10/600);
+    font-size: calc(calc(100vh - 72px) * 10/600);
   }
 
   .row {
     /* height: calc((calc(100vh - 72px)) * 12/600 + 2px); */
-    height: calc((calc(100vh - 72px)) * 12/600);
+    height: calc(calc(100vh - 72px) * 12/600);
 
     display: flex;
     /* height: calc((calc(100vh - 72px)) * 12/600); */
@@ -67,8 +67,12 @@ html, body
   }
 
   .keypad {
-      width: 100%;
-      margin: auto;
+    position: absolute;
+    top: calc(calc(100vh - 72px) * 384/600);
+    left: calc(calc(100vh - 72px) * 28/600);;
+    width: fit-content;
+      /* width: 100%; */
+      /* margin: auto; */
   }
 
   .row-buttons {
@@ -78,17 +82,19 @@ html, body
   }
 
   .arrow {
-      width: 80px;
-      height: 80px;
+      width: calc(calc(100vh - 72px) * 76/600);;
+      height: calc(calc(100vh - 72px) * 43/600);;
       display: inline-block;
       margin: auto;
+      background-color: rgba(255, 0, 0, 0.35);
   }
 
   .arrow-hidden {
-    width: 80px;
-    height: 80px;
+    width: calc(calc(100vh - 72px) * 59/600);;
+    height: calc(calc(100vh - 72px) * 43/600);;
     display: inline-block;
     margin: auto;
+    /* background-color: rgba(0, 0, 255, 0.5); */
   }
 
   .bg-nokia {
