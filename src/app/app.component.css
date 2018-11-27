@@ -28,6 +28,7 @@ html, body
     left: calc(calc(100vh - 72px) * 31/600);
     padding: calc(calc(100vh - 72px) * 12/600) calc(calc(100vh - 72px) * 18/600);
     z-index: -2;
+    width: fit-content;
   }
 
   .game-board {
@@ -101,6 +102,12 @@ html, body
     position: absolute;
     height: calc(100vh - 72px);
     z-index: -1;
+  }
+
+  .absolute-center {
+    margin: auto;
+    left: 0;
+    right: 0;
   }
 
   /* VERSÃO CLARA */

@@ -17,9 +17,9 @@
 </div> -->
 
 <div class="game-container">
-  <!-- <img class="bg-nokia" src="../assets/nokia2280p.png"> -->
-  <img class="bg-nokia" src="../snake-n2280/assets/nokia2280p.png">
-  <div class="game-screen">
+  <img class="bg-nokia absolute-center" src="../assets/nokia2280p.png">
+  <!-- <img class="bg-nokia" src="../snake-n2280/assets/nokia2280p.png"> -->
+  <div class="game-screen absolute-center">
   <div class="game-score">{{score}}</div>
   <div class="game-board">
     <div class="row" *ngFor="let column of board; let i = index">
@@ -56,7 +56,7 @@
       <div class="arrow-hidden"></div>
     </div>
   </div> -->
-  <div class="keypad">
+  <div class="keypad absolute-center">
     <div class="row-buttons">
       <div class="arrow-hidden"></div>
       <div class="arrow" (click)="setDirection(38)"></div>
