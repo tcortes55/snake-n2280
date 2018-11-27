@@ -24,9 +24,9 @@ html, body
     /* top: 135px;
     left: 31px; */
     /* padding: 0.75em 1.05em; */
-    top: calc(90vh * 135/600);
-    left: calc(90vh * 31/600);
-    padding: calc(90vh * 12/600) calc(90vh * 18/600);
+    top: calc((calc(100vh - 56px)) * 135/600);
+    left: calc((calc(100vh - 56px)) * 31/600);
+    padding: calc((calc(100vh - 56px)) * 12/600) calc((calc(100vh - 56px)) * 18/600);
     z-index: -2;
   }
 
@@ -40,23 +40,23 @@ html, body
     /* font-family: 'Chakra Petch', sans-serif; */
     font-family: 'Eight Bit Dragon';
     /* font-size: 10px; */
-    font-size: calc(90vh * 10/600);
+    font-size: calc((calc(100vh - 56px)) * 10/600);
   }
 
   .row {
-    /* height: calc(90vh * 12/600 + 2px); */
-    height: calc(90vh * 12/600);
+    /* height: calc((calc(100vh - 56px)) * 12/600 + 2px); */
+    height: calc((calc(100vh - 56px)) * 12/600);
 
     display: flex;
-    /* height: calc(90vh * 12/600); */
+    /* height: calc((calc(100vh - 56px)) * 12/600); */
     /* VERSÃO CLARA */
     /* height: 26px; */
   }
   
   .column {
     /* border: 1px solid rgba(97, 131, 138, .1); */
-    width: calc(90vh * 12/600);
-    height: calc(90vh * 12/600);
+    width: calc((calc(100vh - 56px)) * 12/600);
+    height: calc((calc(100vh - 56px)) * 12/600);
     /* width: 12px;
     height: 12px; */
     /* VERSÃO CLARA */
@@ -93,7 +93,7 @@ html, body
 
   .bg-nokia {
     position: absolute;
-    height: 90vh;
+    height: calc(100vh - 56px);
     z-index: -1;
   }
 
