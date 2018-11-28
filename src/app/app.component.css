@@ -159,11 +159,13 @@ html, body
 
 
 @font-face {
-  font-family: "Eight Bit Dragon";
-  src: url(../snake-n2280/assets/eight-bit-dragon.otf) format("truetype");
+  /* font-family: "Eight Bit Dragon";
+  src: url(../snake-n2280/assets/eight-bit-dragon.otf) format("truetype"); */
+  font-family: 'Press Start 2P', cursive;
+  src: url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 }
 .customfont { 
-    font-family: "Eight Bit Dragon", sans-serif, Tahoma;
+    font-family: "Press Start 2P", sans-serif, Tahoma;
 }
 
   /* VERSÃO CLARA */
