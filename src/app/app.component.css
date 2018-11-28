@@ -44,7 +44,7 @@ html, body
     font-size: calc(calc(100vh - 72px) * 10/600);
   }
 
-  .startMenu {
+  .start-menu {
     /* background-color: rgba(5,55,2,0.5); */
     background-color: rgba(32,43,0, 0.5);
     position: absolute;
@@ -57,7 +57,7 @@ html, body
 
     top: calc(calc(100vh - 72px) * 158/600);
     width: calc(calc(100vh - 72px) * 168/600);
-    height: calc(calc(100vh - 72px) * 120/600);
+    height: calc(calc(100vh - 72px) * 121/600);
 
     display: flex;
     justify-content: center;
@@ -70,6 +70,14 @@ html, body
     font-size: calc(calc(100vh - 72px) * 16/600);
 
     z-index: 9999;
+  }
+
+  .blink-me {
+    animation: blinker 1s linear 3;
+  }
+  
+  @keyframes blinker {  
+    100% { opacity: 0; }
   }
 
   .row {
@@ -136,6 +144,17 @@ html, body
     margin: auto;
     left: 0;
     right: 0;
+  }
+
+
+  .blink_me {
+    animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
   }
 
   /* VERSÃO CLARA */

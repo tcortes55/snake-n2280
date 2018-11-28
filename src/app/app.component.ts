@@ -15,6 +15,7 @@ export class AppComponent {
   private interval: number;
   private tempDirection: number;
   private gameStarted: boolean = false;
+  private gameOver: boolean = false;
 
   
   public board = [];
@@ -113,10 +114,12 @@ export class AppComponent {
     this.headTransition(newHead);
     if (this.selfCollision(newHead))
     {
+      this.gameOver = true;
 
-      alert("PERDEU!");
-
-      this.gameStarted = false;
+      setTimeout(() => {
+        this.gameOver = false;
+        this.gameStarted = false;
+      }, 3000);
 
       return;
     };
