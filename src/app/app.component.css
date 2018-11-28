@@ -39,7 +39,7 @@ html, body
     /* font-family: 'Courier New', Courier, monospace; */
     /* font-family: 'Press Start 2P', cursive; */
     /* font-family: 'Chakra Petch', sans-serif; */
-    font-family: 'Eight Bit Dragon';
+    /* font-family: 'Eight Bit Dragon'; */
     /* font-size: 10px; */
     font-size: calc(calc(100vh - 72px) * 10/600);
   }
@@ -66,7 +66,7 @@ html, body
     /* padding: calc(calc(100vh - 72px) * 20/600); */
 
     text-align: center;
-    font-family: 'Eight Bit Dragon';
+    /* font-family: 'Eight Bit Dragon'; */
     font-size: calc(calc(100vh - 72px) * 16/600);
 
     z-index: 9999;
@@ -156,6 +156,15 @@ html, body
       opacity: 0;
     }
   }
+
+
+@font-face {
+  font-family: "Eight Bit Dragon";
+  src: url(./eight-bit-dragon.otf) format("truetype");
+}
+.customfont { 
+    font-family: "Eight Bit Dragon", sans-serif, Tahoma;
+}
 
   /* VERSÃO CLARA */
   /* .head, .food {

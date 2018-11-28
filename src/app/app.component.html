@@ -19,14 +19,14 @@
 <div class="game-container">
   <!-- <img class="bg-nokia absolute-center" src="../assets/nokia2280p.png"> -->
   <img class="bg-nokia absolute-center" src="../snake-n2280/assets/nokia2280p.png">
-  <div class="start-menu absolute-center"  *ngIf="!gameStarted" (click)="newGame()">
+  <div class="start-menu absolute-center customfont"  *ngIf="!gameStarted" (click)="newGame()">
       CLICK TO START
   </div>
-  <div class="start-menu absolute-center blink-me"  *ngIf="gameOver">
+  <div class="start-menu absolute-center customfont blink-me"  *ngIf="gameOver">
       GAME OVER!
   </div>
   <div class="game-screen absolute-center">
-  <div class="game-score">{{score}}</div>
+  <div class="game-score customfont">{{score}}</div>
   <div class="game-board">
     <div class="row" *ngFor="let column of board; let i = index">
       <div class="column" [ngStyle]="{'background-color': setColors(i, j)}" *ngFor="let row of column; let j = index">
