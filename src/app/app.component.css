@@ -45,7 +45,8 @@ html, body
   }
 
   .startMenu {
-    background-color: blueviolet;
+    /* background-color: rgba(5,55,2,0.5); */
+    background-color: rgba(32,43,0, 0.5);
     position: absolute;
     /* width: 61%;
     height: 52%; */
@@ -67,6 +68,7 @@ html, body
     text-align: center;
     font-family: 'Eight Bit Dragon';
     font-size: calc(calc(100vh - 72px) * 16/600);
+    color: black;
 
     z-index: 9999;
   }

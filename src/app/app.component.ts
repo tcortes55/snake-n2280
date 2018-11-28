@@ -113,7 +113,10 @@ export class AppComponent {
     this.headTransition(newHead);
     if (this.selfCollision(newHead))
     {
+
       alert("PERDEU!");
+
+      this.gameStarted = false;
 
       return;
     };
