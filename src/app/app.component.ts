@@ -14,13 +14,12 @@ export class AppComponent {
 
   private interval: number;
   private tempDirection: number;
-  private gameStarted: boolean = false;
-  private gameOver: boolean = false;
 
-  
+  public gameStarted: boolean = false;
+  public gameOver: boolean = false;
+
   public board = [];
   public score = 0;
-
 
   private snake = {
     direction: CONTROLS.LEFT,
