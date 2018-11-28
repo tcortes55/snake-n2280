@@ -160,7 +160,7 @@ html, body
 
 @font-face {
   font-family: "Eight Bit Dragon";
-  src: url(./eight-bit-dragon.otf) format("truetype");
+  src: url(../snake-n2280/assets/eight-bit-dragon.otf) format("truetype");
 }
 .customfont { 
     font-family: "Eight Bit Dragon", sans-serif, Tahoma;
