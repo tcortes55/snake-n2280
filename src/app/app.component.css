@@ -68,7 +68,6 @@ html, body
     text-align: center;
     font-family: 'Eight Bit Dragon';
     font-size: calc(calc(100vh - 72px) * 16/600);
-    color: black;
 
     z-index: 9999;
   }
