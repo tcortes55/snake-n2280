@@ -14,6 +14,8 @@ export class AppComponent {
 
   private interval: number;
   private tempDirection: number;
+  private gameStarted: boolean = false;
+
   
   public board = [];
   public score = 0;
@@ -206,6 +208,7 @@ export class AppComponent {
   //
   newGame(): void {
     this.setBoard();
+    this.gameStarted = true;
     this.score = 0;
     this.interval = 150;
     this.tempDirection = CONTROLS.LEFT;

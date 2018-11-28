@@ -25,7 +25,7 @@ html, body
     left: 31px; */
     /* padding: 0.75em 1.05em; */
     top: calc(calc(100vh - 72px) * 135/600);
-    left: calc(calc(100vh - 72px) * 31/600);
+    /* left: calc(calc(100vh - 72px) * 31/600); */
     padding: calc(calc(100vh - 72px) * 12/600) calc(calc(100vh - 72px) * 20/600);
     z-index: -2;
     width: fit-content;
@@ -42,6 +42,33 @@ html, body
     font-family: 'Eight Bit Dragon';
     /* font-size: 10px; */
     font-size: calc(calc(100vh - 72px) * 10/600);
+  }
+
+  .startMenu {
+    background-color: blueviolet;
+    position: absolute;
+    /* width: 61%;
+    height: 52%; */
+    /* top: calc(calc(100vh - 72px) * 158/600);
+    left: calc(calc(100vh - 72px) * 274/600);
+    width: calc(calc(100vh - 72px) * 168/600);
+    height: calc(calc(100vh - 72px) * 120/600); */
+
+    top: calc(calc(100vh - 72px) * 158/600);
+    width: calc(calc(100vh - 72px) * 168/600);
+    height: calc(calc(100vh - 72px) * 120/600);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* padding: calc(calc(100vh - 72px) * 20/600); */
+
+    text-align: center;
+    font-family: 'Eight Bit Dragon';
+    font-size: calc(calc(100vh - 72px) * 16/600);
+
+    z-index: 9999;
   }
 
   .row {
